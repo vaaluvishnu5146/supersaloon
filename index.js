@@ -7,7 +7,7 @@ const HTTP_SERVER = express();
 /**
  * ENABLING CORS
  */
-httpServer.use(cors());
+HTTP_SERVER.use(cors());
 /**
  * ENABLING ENVIRONMENT VARIABLES IN NODE PROJECT
  */
