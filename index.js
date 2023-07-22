@@ -26,6 +26,7 @@ HTTP_SERVER.use(bodyParser.urlencoded({ extended: true }));
 // INJECT APP_SERVER IN HTTP_SERVER
 HTTP_SERVER.use("/api", require("./app"));
 
-HTTP_SERVER.listen(PORT, HOST_NAME, () => {
-  console.log("Server started");
+HTTP_SERVER.listen(PORT, "0.0.0.0", (err) => {
+  if (err) throw err;
+  console.log(`Listening on PORT ${PORT}`);
 });
